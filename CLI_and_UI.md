@@ -5,4 +5,6 @@ CLI은 커맨더형 상호작용 방식이다. 이를 배우는 이유는 빠르
  <br>
 git과 github가 이 방식으로 버전을 제어하기 때문이다
  <br>
-![image](https://github.com/domino0628/CS/assets/59598751/97a82ed9-dde1-4f5f-8c49-2756ddb41994)
+
+![image](https://github.com/domino0628/CS/assets/59598751/f43c5b3d-7d44-42c8-ac48-21e2030b316c)
+
