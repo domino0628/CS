@@ -1,0 +1,16 @@
+
+
+# main/master
+<br>
+메인이 되는 가지(Branch)이다. 여러 가지 코드를 수정하고, 바람직하게 개선되었으면 main branch에 추가하여 버전을 업그레이드한다.
+<br>
+
+# feature
+<br>
+개선을 위해 변형한 branch, 코드를 충분히 살핀 후 이상이 없으면 메인에 추가하거나, 특별한 버전을 위해 따로 뻗어나간 가지이다.
+<br><br>
+
+
+
+
+![image](https://github.com/domino0628/CS/assets/59598751/3433672d-2c96-49ed-ba77-45b398d03e78)
