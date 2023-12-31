@@ -1,0 +1,38 @@
+# 애노테이션 : 주석형태로 특정 기능을 나타내거나 특정 설정을 지정하기 위해 사용되는 메타데이터
+
+<br>
+
+![image](https://github.com/domino0628/CS/assets/59598751/547ff4d7-5d15-4af8-9977-f333074d181d)
+
+
+<br>
+
+# 제어의 역전(IOC) 컨테이너 : 컨테이너가 빈(컨테이너에 들어가는 객체)의 생성과 소멸을 개발자 대신 관리한다.
+
+<br>
+
+![image](https://github.com/domino0628/CS/assets/59598751/4b95b2b3-e225-47f6-ae46-044aeac331d6)
+
+<br><br>
+
+## 의존성 주입(DI)
+<br><br>
+Component류 어노테이션(Controller,Repository 등)을 붙여 스프링 빈을 스프링 컨테이너에 담아 그때그때 쓰도록 한다. 주로 싱글톤(단 하나의 형식만 스프링 컨테이너에 들어가있음)
+<br><br>
+이러한 작업은 코드마다 새로 객체를 생성해 코드 가독성을 해치는 경우를 방지함.
+<br><br>
+@Autowired로 스프링 컨테이너에서 해당 객체를 꺼내 사용한다고 약속한다.
+<br><br>
+자바 코드로 DI를 실행 시 생성자 주입 방법을 쓴다.
+<br><br>
+스프링 빈은 내용 변형할 일이 없어 생성자의 기능(한 번 만들어지면 불변함)을 살린 생성자 주입이 좋다.
+<br><br>
+정형화 된 repository,service,controller 같은 패턴은 컴포넌트스캔이 간편하다. 그러나 상황에 따라 구현 클래스를 변경해야 하면 직접 의존성을 주입하면 수정이 쉽다.
+<br><br>
+![image](https://github.com/domino0628/Springinfo/assets/59598751/6bf742a7-fa52-42aa-b98c-cb1fcb45eed0)
+<br><br>
+처음에 저 반환되는 객체는 스프링에서 직접 구현한 단순한 저장소인데, 나중에 실제 DB로 바꾸려면 그 부분만을 바꾸면 된다.
+<br><br>
+![image](https://github.com/domino0628/Springinfo/assets/59598751/417f9ce9-5d24-408e-a529-e76e86c803d6)
+
+
