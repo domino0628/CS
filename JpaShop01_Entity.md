@@ -1,4 +1,4 @@
-# 애노테이션 : 주석형태로 특정 기능을 나타내거나 특정 설정을 지정하기 위해 사용되는 메타데이터, @Controller 등으로 컨테이너에 빈을 등록한다.
+![image](https://github.com/domino0628/CS/assets/59598751/2f246da6-2abc-4839-915d-9c1c8eaf0a86)# 애노테이션 : 주석형태로 특정 기능을 나타내거나 특정 설정을 지정하기 위해 사용되는 메타데이터, 컨테이너에 빈을 등록한다.
 
 <br>
 
@@ -78,9 +78,13 @@ SQL문이 아닌 메소드 형식으로 직접 DB데이터 관리가 가능함
 <br><br>
 Hibernate는 구현체중 하나
 <br><br>
+# Example 2 : 간단한 멤버 저장소의 예
 <br><br>
+![image](https://github.com/domino0628/CS/assets/59598751/1eb86626-5433-4984-bf77-51314bcd1ab2)
 <br><br>
+PersistentContext 어노테이션으로 entityManeger를 주입할 수 있다. 이것은 프로그램 종료시에도 데이터의 영속성을 가질 수 있도록 해주는 관리자라고 생각하면 된다.
 <br><br>
+엔티티매니저를 통한 데이터변경은 항상 트랜잭션 내에서 이루어져야 한
 <br><br>
 <br><br>
 <br><br>
