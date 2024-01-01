@@ -85,18 +85,41 @@ Hibernate는 구현체중 하나
 <br><br>
 PersistentContext 어노테이션으로 entityManeger를 주입할 수 있다. 이것은 프로그램 종료시에도 데이터의 영속성을 가질 수 있도록 해주는 관리자라고 생각하면 된다.
 <br><br>
-엔티티매니저를 통한 데이터변경은 항상 트랜잭션 내에서 이루어져야 함????
+엔티티 : 그냥 객체다. 근데 JPA의 영속성을 띄는 객체 (프로그램 종료 후에도 저장되는)
 <br><br>
-H2를 실행하지 않고 테스트를 돌리면 오류가 뜸???
+엔티티매니저를 통한 데이터변경은 항상 트랜잭션 내에서 이루어져야함. (ACID룰)
 <br><br>
+원자성 (Atomicity): 트랜잭션의 모든 연산은 원자 단위로 실행되어야 하며, 모두 성공하거나 모두 실패하여 롤백되어야 함
 <br><br>
+일관성 (Consistency): 트랜잭션이 완료된 후에도 데이터베이스는 일관된 상태를 유지해야 함 즉, 트랜잭션 전후에 데이터베이스의 무결성이 보장되어야 함
 <br><br>
+고립성 (Isolation): 여러 트랜잭션이 동시에 수행되더라도, 각 트랜잭션은 서로 영향을 주지 않고 독립적으로 실행되는 것처럼 보여야 함.
 <br><br>
+지속성 (Durability): 트랜잭션이 성공적으로 완료된 후에는 그 결과가 영구적으로 저장되어야 합니다. 시스템이 고장나더라도 트랜잭션의 결과는 보존되어야 함
 <br><br>
+@Transactional을 통해 이러한 성질을 주입한다.
+<br><br><br><br>
+다음과 같은 테스트를 돌리면 H2 데이터베이스에 자동으로 Member table이 생성된다.
 <br><br>
+![image](https://github.com/domino0628/CS/assets/59598751/17b64602-bf48-41d2-b3ce-ae18c68d55a0)
+
 <br><br>
+이게 JPA의 ORM적인 특성이고, yml 파일에서 auto create 설정을 해놨기 때문이다.
 <br><br>
+![image](https://github.com/domino0628/CS/assets/59598751/5d1584a5-a22c-42a1-91a4-f9a646420f96)
+
 <br><br>
+Test에 @Transactional이 붙으면 롤백을 해서 테이블이 비게 된다.
+<br><br>
+![image](https://github.com/domino0628/CS/assets/59598751/a3935493-9433-4a32-9224-6dfa02ffcb1b)
+
+<br><br>
+테스트할때 롤백 없애는 방법 : @Rollback(false)
+<br><br>
+![image](https://github.com/domino0628/CS/assets/59598751/7448d70a-a870-4bb8-a614-d6dabb8dd32c)
+
+<br><br>
+같은 영속성 컨텍스트 안에서는 id값이 같으면 같은 엔티티이다. 또한 동일 엔티티 조회시 캐싱된 메모리를 사용해 db로의 접근을 줄인다.
 <br><br>
 <br><br>
 <br><br>
