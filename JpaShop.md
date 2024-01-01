@@ -68,9 +68,15 @@ Component류 어노테이션(Controller,Repository 등)을 붙여 스프링 빈�
 ![image](https://github.com/domino0628/CS/assets/59598751/a2402450-dd62-4ad8-be60-12eb15ec3bf3)
 
 <br><br>
+
+# ORM : ORM 기술은 객체(Object)와 DB테이블을 매핑하여 데이터를 객체화하는 기술
 <br><br>
+SQL문이 아닌 메소드 형식으로 직접 DB데이터 관리가
 <br><br>
+
+# Java Persistence Api : ORM의 일종으로, 프로그램 종료 후에도 영구 저장이 가능하다 
 <br><br>
+Hibernate는 구현체중 하나
 <br><br>
 <br><br>
 <br><br>
