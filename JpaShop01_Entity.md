@@ -125,21 +125,88 @@ Test에 @Transactional이 붙으면 롤백을 해서 테이블이 비게 된다.
 <br><br>
 # Run은 그 파일을 실행하는 것이다.(웹의 경우, 실행하면 접속이 가능하다.)
 <br><br>
+단일 테이블 전략 : 한 가지의 테이블만을 사용한다
 <br><br>
+# 테이블이 다대다 관계일 때, 매핑 테이블을 사용하지 않으면 일어나는 일
 <br><br>
+```
+CREATE TABLE Students (
+    student_id INT PRIMARY KEY,
+    student_name VARCHAR(255),
+    course_id INT,
+    course_name VARCHAR(255)
+);
+```
 <br><br>
+```
+CREATE TABLE Courses (
+    course_id INT PRIMARY KEY,
+    course_name VARCHAR(255),
+    student_id INT,
+    student_name VARCHAR(255)
+);
+```
 <br><br>
+```
+-- 예시 데이터
+INSERT INTO Students (student_id, student_name, course_id, course_name)
+VALUES
+    (1, 'Alice', 101, 'Math'),
+    (1, 'Alice', 102, 'History'),
+    (2, 'Bob', 101, 'Math'),
+    (2, 'Bob', 103, 'Science');
+```
 <br><br>
+이처럼 다대다 관계에서 데이터를 쿼리할 때, ID, NAME 등 중복되는 데이터를 여러 번 저장해야 하기 때문에 무결성을 어렵게 한다.
 <br><br>
+# 개체 무결성(Entity Integrity)
 <br><br>
+
+주 키(primary key)를 포함한 각 행은 유일한 값을 가져야 함. 이는 테이블의 각 행이 식별될 수 있도록 하는 규칙이다.
+
 <br><br>
+# 외래 키 : 테이블 사이의 연관성을 나타내기 위한 키
 <br><br>
+```
+CREATE TABLE country (
+ country_id integer,
+ name varchar(50),
+ population integer);
+
+CREATE TABLE city (
+ city_id integer,
+ name varchar(50),
+ country_id integer);
+```
 <br><br>
+위 테이블을 사람의 시선으로 보면, 연관되어 있다는 것을 알 수 있지만 컴퓨터는 그러지 못 함.
 <br><br>
+컴퓨터가 country 테이블에 없는 country_id 값을 city에 넣어버릴 수도 있기 때문에, 그런 불상사를 막기 위해 외래 키를 도입한다.
 <br><br>
+```
+1. country 테이블에 기본 키 생성하기
+DROP TABLE country;
+CREATE TABLE country(
+ country_id integer,
+ name varchar(50),
+ population integer,
+ PRIMARY KEY (country_id) );
+
+2. 기본 키와 외래 키를 정의한 새로운 테이블 생성
+DROP TABLE city;
+CREATE TABLE city (
+ city_id integer,
+ name varchar(50),
+ country_id integer,
+ PRIMARY KEY (city_id),
+ FOREIGN KEY (country_id) REFERENCES country(country_id) );
+```
 <br><br>
+부모 테이블 : 더 넓은 정보를 담고 있는 테이블
 <br><br>
+자식 테이블 : 더 좁은 정보를 담고 있는 테이블
 <br><br>
+부모 테이블과 자식 테이블 간의 외래 키가 항상 가지는 규칙을 기억하자. 자식 테이블 안의 값이 부모 테이블 안에 언제나 존재해야 한다. 그렇지 않으면 오류임
 <br><br>
 <br><br>
 <br><br>
