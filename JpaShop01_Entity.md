@@ -208,9 +208,12 @@ CREATE TABLE city (
 <br><br>
 부모 테이블과 자식 테이블 간의 외래 키가 항상 가지는 규칙을 기억하자. 자식 테이블 안의 값이 부모 테이블 안에 언제나 존재해야 한다. 그렇지 않으면 오류임
 <br><br>
+참조 : https://kimsyoung.tistory.com/entry/SQL-%EC%99%B8%EB%9E%98-%ED%82%A4%EC%97%90-%EB%8C%80%ED%95%9C-%EC%9D%B4%ED%95%B4
+<br><br>
+연관관계의 주인 : 외래 키가 있는 엔티티에 정의한다.
 <br><br>
 <br><br>
-<br><br>
+
 <br><br>
 <br><br>
 <br><br>
