@@ -212,7 +212,9 @@ CREATE TABLE city (
 <br><br>
 연관관계의 주인 : 외래 키가 있는 엔티티에 정의한다.
 <br><br>
+@Id, @GeneratedValue : 주 키를 설정하고 자동으로 생성한다. (1씩 늘려나감)
 <br><br>
+![image](https://github.com/domino0628/CS/assets/59598751/c9c73d94-a88e-45ce-afc3-df3d7e3594cc)
 
 <br><br>
 <br><br>
