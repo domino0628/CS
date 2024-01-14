@@ -217,10 +217,28 @@ CREATE TABLE city (
 ![image](https://github.com/domino0628/CS/assets/59598751/c9c73d94-a88e-45ce-afc3-df3d7e3594cc)
 
 <br><br>
+
+# fetchtype : XXXtoOne의 경우, 기본이 EAGER인데, 전부 lazy로 바꾸는 게 보통 좋다.
 <br><br>
+실무에선 테이블이 많은데 fetchtype.eager(즉시로딩)을 실행할 시, 연관된 쿼리가 전부 나오기 때문에 리소스를 많이 잡아먹는다.
 <br><br>
+```
+@Entity
+public class Author {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    private String name;
+
+    @OneToMany(mappedBy = "author", fetch = FetchType.EAGER)
+    private List<Book> books;
+}
+```
 <br><br>
+위의 코드의 경우, books 필드가 EAGER이기 때문에, 해당 저자의 모든 책들이 쿼리시마다 로딩됨.
 <br><br>
+지연 로딩 : FetchType.LAZY로 설정하면 연관된 엔티티는 해당 엔티티가 실제로 사용될 때까지 로딩되지 않는다.
 <br><br>
 <br><br>
 <br><br>
