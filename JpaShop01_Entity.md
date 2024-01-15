@@ -240,8 +240,12 @@ public class Author {
 <br><br>
 지연 로딩 : FetchType.LAZY로 설정하면 연관된 엔티티는 해당 엔티티가 실제로 사용될 때까지 로딩되지 않는다.
 <br><br>
+# 질문 사항
 <br><br>
+![image](https://github.com/domino0628/CS/assets/59598751/ea1ec303-9e0b-4c8d-bbcb-fce8c2903d3d)
+
 <br><br>
+cascadeALL 설정해놓으면, 클래스의 영속성이 부여될 때 각각의 필드가 다 영속성 부여됨
 <br><br>
 <br><br>
 <br><br>
