@@ -21,8 +21,10 @@ test/resources 디렉토리에 application.yml을 생성하면 테스트는 해�
 
 
 <br><br>
+다음과 같은 쿼리는 Item 객체 형태의 리스트를 Item이라는 엔티티에서 전부 추출하는 것이다
 
 <br><br>
+![image](https://github.com/domino0628/CS/assets/59598751/6aceeafd-e3b4-4601-80de-d0ed8dacd388)
 
 <br><br>
 
