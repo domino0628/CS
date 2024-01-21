@@ -27,13 +27,63 @@ test/resources 디렉토리에 application.yml을 생성하면 테스트는 해�
 ![image](https://github.com/domino0628/CS/assets/59598751/6aceeafd-e3b4-4601-80de-d0ed8dacd388)
 
 <br><br>
+# 정적메소드 : 인스턴스가 사용되지 않더라도 사용할 수 있는 메서드이다.
+<br><br>
+```
+public class MathUtil {
+    // 정적 메소드: 두 수를 더한 결과를 반환
+    public static int add(int a, int b) {
+        return a + b;
+    }
+
+    // 정적 메소드: 두 수를 곱한 결과를 반환
+    public static int multiply(int a, int b) {
+        return a * b;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        // 정적 메소드 호출
+        int sum = MathUtil.add(5, 3);
+        System.out.println("Sum: " + sum);
+
+        int product = MathUtil.multiply(4, 6);
+        System.out.println("Product: " + product);
+    }
+}
+```
 
 <br><br>
-
+이와 반대되는 개념으로, 인스턴스 메서드가 있다.
 <br><br>
+```
+public class Car {
+    private String model;
 
-<br><br>
+    // 인스턴스 메소드: 모델을 설정하는 메소드
+    public void setModel(String newModel) {
+        this.model = newModel;
+    }
 
+    // 인스턴스 메소드: 현재 모델을 반환하는 메소드
+    public String getModel() {
+        return model;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        // 인스턴스 생성
+        Car myCar = new Car();
+
+        // 인스턴스 메소드 호출
+        myCar.setModel("Toyota");
+        String currentModel = myCar.getModel();
+        System.out.println("Current Model: " + currentModel);
+    }
+}
+```
 <br><br>
 
 <br><br>
