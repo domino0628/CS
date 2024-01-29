@@ -86,7 +86,9 @@ public class Main {
 ```
 <br><br>
 
+# MemberForm이라는 클래스를 Member가 있는데도 굳이 만든 이유 : 엔티티에는 핵심 비즈니스 로직만 넣는다. 그렇지 않으면 비즈니스 로직 한 번 호출했는데 화면 관련 로직들도 전부 불러오기 때문이다. (비즈니스 로직 건드렸더니 화면이 깨질 수 있다.)
 <br><br>
+![image](https://github.com/domino0628/CS/assets/59598751/81f6caa2-af7a-47f7-893f-a001cf24086f)
 
 <br><br>
 
