@@ -2,9 +2,12 @@
 <br><br>
 # 템플릿 엔진 렌더링은 return으로 html 반환하는 단순한 형태
 <br><br>
-# API에서 들어오거나 나가는 요청 전부 DTO로 전송한다, 엔티티를 전달하면 좋지 않다. (엔티티를 수정하게 되면 컴파일 에러가 많이 뜰 수 있음)
+# API에서 파라미터는 엔티티를 받는게 아니라 DTO형태로 받는게 좋다, 왜냐하면 API 스펙을 직관적으로 알 수 있기 때문이다.
 <br><br>
+![image](https://github.com/domino0628/CS/assets/59598751/8551ab1e-6725-42fc-be4e-68ec8949bc59)
+
 <br><br>
+위의 그림에서 CreateMemberRequest라는 DTO를 만들었고, name만이 전달됨을 가독성 좋게 알 수 있다.
 <br><br>
 <br><br>
 <br><br>
