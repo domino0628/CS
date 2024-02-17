@@ -9,6 +9,7 @@
 <br><br>
 위의 그림에서 CreateMemberRequest라는 DTO를 만들었고, name만이 전달됨을 가독성 좋게 알 수 있다.
 <br><br>
+application.yml : ddl auto를 None으로 설정하면 애플리케이션이 다시 시작되도 데이터베이스가 초기화 되지 않는다.
 <br><br>
 <br><br>
 <br><br>
