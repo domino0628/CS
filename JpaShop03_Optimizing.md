@@ -58,11 +58,20 @@ orders 가져올때 쿼리 1번, getmember 2 getDelivery 2번 총 5번의 쿼리
 ![image](https://github.com/domino0628/CS/assets/59598751/846602ab-e75b-4198-aa34-d0824a110df7)
 
 <br><br>
+
+# N+1 쿼리 최적화 : fetch join
 <br><br>
+밑 그림은 한 번에 프록시가 아닌 실제 객체를 가져오는 메소드이다. 
 <br><br>
+join해서 order,member,delivery 정보를 전부 합친 1개의 쿼리만 일어나기 때문에 성능이 올라간다. 
 <br><br>
+![image](https://github.com/domino0628/CS/assets/59598751/acf2d31f-1aa0-41cc-887c-60f541eccf9e)
+
 <br><br>
+![image](https://github.com/domino0628/CS/assets/59598751/3497a871-c64e-45a4-97c2-20ba5479241b)
+
 <br><br>
+객체 그래프는 그냥 최종 쿼리된 테이블(근데 java버전) 이야기하는 
 <br><br>
 <br><br>
 <br><br>
