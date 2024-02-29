@@ -60,28 +60,7 @@ orders 가져올때 쿼리 1번, getmember 2 getDelivery 2번 총 5번의 쿼리
 <br><br>
 
 # N+1 쿼리 최적화 : fetch join
-<br><br>
-밑 그림은 한 번에 프록시가 아닌 실제 객체를 가져오는 메소드이다. 
-<br><br>
-join해서 order,member,delivery 정보를 전부 합친 1개의 쿼리만 일어나기 때문에 성능이 올라간다. 
-<br><br>
-![image](https://github.com/domino0628/CS/assets/59598751/acf2d31f-1aa0-41cc-887c-60f541eccf9e)
-
-<br><br>
-![image](https://github.com/domino0628/CS/assets/59598751/3497a871-c64e-45a4-97c2-20ba5479241b)
-
-<br><br>
-객체 그래프는 그냥 최종 쿼리된 테이블(근데 java버전) 이야기하는 것
-<br><br>
-페치조인으로 orderitems 까지 땡겨오는 다음과 같은 api는 쿼리가 한 번만 나가지만, 데이터의 중복이 많다 -> 마치 cross join처럼 데이터가 뻥튀기(일대다에서 다에 맞추어 데이터를 가져오기 때문에 데이터량이 많아짐) 
-<br><br>
-![image](https://github.com/domino0628/CS/assets/59598751/d94a88b9-09eb-4001-9860-18d3ab3e30d4)
-
-<br><br>
-![image](https://github.com/domino0628/CS/assets/59598751/f5f2d534-aaa1-4e1d-81c4-75b11d6d081c)
-
-<br><br>
-<br><br>
+<br><br>임. Member에서 Order를 참조하면 양방향 관계가 되어야 하므로 불필요한 관계가 발생할 수 있다
 <br><br>
 <br><br>
 <br><br>
